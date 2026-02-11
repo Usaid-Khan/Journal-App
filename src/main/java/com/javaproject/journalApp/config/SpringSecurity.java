@@ -40,6 +40,3 @@ public class SpringSecurity {
         return provider;
     }
 }
-
-//MONGO_URI=mongodb+srv://usaid_khan:MNeWh32jJZalIgmO@cluster0.n3ii3xe.mongodb.net/?appName=Cluster0
-//DB_NAME=journaldb
