@@ -27,6 +27,7 @@ public class SpringSecurity {
                 .csrf(customizer -> customizer.disable())
                 .authorizeHttpRequests(request -> request
                         .requestMatchers("/journal/**", "/user/**").authenticated()
+                        .requestMatchers("/admin/**").hasAnyRole("ADMIN")
                         .anyRequest().permitAll())
                 .httpBasic(Customizer.withDefaults())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
@@ -40,6 +41,3 @@ public class SpringSecurity {
         return provider;
     }
 }
-
-//MONGO_URI=mongodb+srv://usaid_khan:MNeWh32jJZalIgmO@cluster0.n3ii3xe.mongodb.net/?appName=Cluster0
-//DB_NAME=journaldb
