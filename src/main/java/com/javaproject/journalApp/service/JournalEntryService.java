@@ -3,6 +3,7 @@ package com.javaproject.journalApp.service;
 import com.javaproject.journalApp.entity.JournalEntry;
 import com.javaproject.journalApp.entity.User;
 import com.javaproject.journalApp.repository.JournalEntryRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,6 +18,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Slf4j
 public class JournalEntryService {
     @Autowired
     private JournalEntryRepository journalEntryRepository;
@@ -61,7 +63,7 @@ public class JournalEntryService {
             }
             return new ResponseEntity<>("This journal entry does not exists.", HttpStatus.NOT_FOUND);
         } catch (Exception e) {
-            System.out.println(e);
+            log.error("Error: ", e);
             throw new RuntimeException("An error occurred while deleting the entry. ", e);
         }
     }

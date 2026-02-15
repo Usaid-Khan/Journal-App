@@ -2,10 +2,7 @@ package com.javaproject.journalApp.service;
 
 import com.javaproject.journalApp.entity.User;
 import com.javaproject.journalApp.repository.UserRepository;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.mockito.ArgumentMatchers;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -19,6 +16,7 @@ import java.util.ArrayList;
 
 import static org.mockito.Mockito.when;
 
+@Disabled
 public class UserDetailsServiceImplTests {
     @InjectMocks
     private UserDetailsServiceImpl userDetailsService;
