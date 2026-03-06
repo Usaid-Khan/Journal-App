@@ -1,6 +1,9 @@
 spring:
   application:
     name: journal-app
+  redis:
+    host: ${REDIS_HOST}
+    port: ${REDIS_PORT}
   data:
     mongodb:
       uri: ${MONGO_URI}
