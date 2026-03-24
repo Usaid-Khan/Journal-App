@@ -35,16 +35,6 @@ spring:
           json:
             trusted:
               packages: com.javaproject.journalApp.model
-#    properties:
-#      security:
-#        protocol: SASL_SSL
-#      sasl:
-#        mechanism: PLAIN
-#        jaas:
-#          config: org.apache.kafka.common.security.plain.PlainLoginModule required username=${USERNAME} password=${PASSWORD};
-#        session:
-#          timeout:
-#            ms: 45000
 
 
 server:

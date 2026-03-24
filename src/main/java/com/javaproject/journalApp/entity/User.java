@@ -22,7 +22,7 @@ public class User {
     @NonNull
     private String userName;
     private String email;
-    private boolean sentimentAnalysis;
+    private Boolean sentimentAnalysis;
     @NonNull
     private String password;
     @DBRef
