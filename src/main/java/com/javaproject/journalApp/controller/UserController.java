@@ -5,6 +5,8 @@ import com.javaproject.journalApp.entity.User;
 import com.javaproject.journalApp.repository.UserRepository;
 import com.javaproject.journalApp.service.UserService;
 import com.javaproject.journalApp.service.WeatherService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/user")
+@Tag(name = "User APIs", description = "Read, Update & Delete User")
 public class UserController {
     @Autowired
     private UserService userService;
@@ -43,6 +46,7 @@ public class UserController {
     }
 
     @GetMapping
+    @Operation(summary = "Check current weather")
     public ResponseEntity<?> greeting() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
