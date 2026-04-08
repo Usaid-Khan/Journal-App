@@ -1,0 +1,7 @@
+com\javaproject\journalApp\service\UserDetailsServiceImplTests.class
+com\javaproject\journalApp\cron\UserSchedulersTest.class
+com\javaproject\journalApp\JournalAppApplicationTests.class
+com\javaproject\journalApp\service\EmailServiceTests.class
+com\javaproject\journalApp\repository\UserRepositoryImplTests.class
+com\javaproject\journalApp\service\UserServiceTests.class
+com\javaproject\journalApp\service\RedisTests.class
